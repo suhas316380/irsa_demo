@@ -22,6 +22,8 @@ Pre-requisites for the script:
 
 References:
 [1] https://aws.amazon.com/blogs/opensource/introducing-fine-grained-iam-roles-service-accounts/
+
 [2] Creating an IAM Role and Policy for your Service Account  - Create an IAM Role - https://docs.aws.amazon.com/eks/latest/userguide/create-service-account-iam-policy-and-role.html#create-service-account-iam-role
+
 [3] s3-echoer - https://github.com/mhausenblas/s3-echoer
 
