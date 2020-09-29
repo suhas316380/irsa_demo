@@ -21,11 +21,6 @@ requiredK8sVersion="113"
 K8sVersion=$(eksctl get cluster --name $clusterName | cut -f 2 | tr -d "\n" | tr -d ".")
 [[ $K8sVersion -lt $requiredK8sVersion ]] && echo "Need Kubernetes Version 1.13 or greater..Exiting" && exit 1
 
-# Check Eksctl Version
-requiredEksctlVersion="050"
-EksctlVersion=$(eksctl version | awk -F ':"' '{print $4}' | sed 's/[^a-zA-Z0-9]//g')
-[[ $EksctlVersion -lt $requiredEksctlVersion ]] && echo "Need eksctl Version greater than 0.5.0 ..Exiting" && exit 1
-
 # Associate OIDC
 eksctl utils associate-iam-oidc-provider --name $clusterName --approve
 
